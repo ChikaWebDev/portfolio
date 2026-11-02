@@ -1,0 +1,238 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Miracle Chika Obi | Front-End Developer</title>
+<style>
+:root {
+  --bg:#080d18; --card:#101a2b; --text:#f4f7ff;
+  --muted:#a8b4ca; --blue:#4da3ff; --cyan:#6ce5ff;
+  --line:#26344c;
+}
+* { box-sizing:border-box; margin:0; padding:0; }
+html { scroll-behavior:smooth; }
+body {
+  font-family:Segoe UI,Arial,sans-serif;
+  background:var(--bg); color:var(--text); line-height:1.6;
+}
+a { color:inherit; text-decoration:none; }
+.wrap { width:min(1100px,90%); margin:auto; }
+header { background:#101a2b; border-bottom:1px solid var(--line); }
+nav {
+  min-height:70px; display:flex; justify-content:space-between;
+  align-items:center; gap:15px; flex-wrap:wrap;
+}
+.brand { font-size:23px; font-weight:bold; }
+.brand span, h1 span { color:var(--blue); }
+.navlinks { display:flex; gap:20px; flex-wrap:wrap; }
+.navlinks a { color:var(--muted); }
+.navlinks a:hover { color:var(--cyan); }
+.hero {
+  display:grid; grid-template-columns:1.3fr .7fr;
+  align-items:center; gap:35px; padding-top:75px; padding-bottom:75px;
+}
+.eyebrow {
+  color:var(--cyan); font-size:13px; font-weight:bold;
+  text-transform:uppercase; letter-spacing:2px;
+}
+h1 { font-size:clamp(38px,6vw,65px); line-height:1.15; margin:15px 0; }
+.intro { color:var(--muted); font-size:18px; }
+.photo {
+  width:240px; height:240px; max-width:100%; border-radius:50%;
+  object-fit:cover; object-position:center 35%;
+  border:5px solid var(--blue); justify-self:center;
+}
+.actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:25px; }
+.btn {
+  display:inline-block; padding:11px 17px; border-radius:9px;
+  font-weight:bold; margin-top:5px;
+}
+.primary { background:var(--blue); color:#07101d; }
+.secondary { border:1px solid var(--line); background:var(--card); }
+.facts { display:flex; gap:10px; flex-wrap:wrap; margin-top:22px; }
+.fact {
+  border:1px solid var(--line); background:var(--card);
+  border-radius:20px; padding:6px 11px; font-size:13px;
+}
+section { padding-top:45px; padding-bottom:45px; }
+h2 { font-size:30px; margin:8px 0 15px; }
+.muted { color:var(--muted); }
+.about, .skillbox, .project, .contact {
+  background:var(--card); border:1px solid var(--line);
+  border-radius:16px; padding:23px;
+}
+.skills { display:flex; gap:10px; flex-wrap:wrap; }
+.skill {
+  background:#142641; border:1px solid #29476e;
+  padding:8px 12px; border-radius:8px;
+}
+.projects {
+  display:grid; grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:17px; margin-top:22px;
+}
+.project { display:flex; flex-direction:column; }
+.project-icon { font-size:30px; margin-bottom:12px; }
+.project h3 { font-size:21px; margin-bottom:8px; }
+.project p { color:var(--muted); margin-bottom:16px; flex:1; }
+.tags { display:flex; gap:7px; flex-wrap:wrap; margin-bottom:16px; }
+.tags span {
+  background:#0a1425; border:1px solid var(--line);
+  padding:4px 8px; border-radius:6px; font-size:12px;
+}
+.project-link { color:var(--cyan); font-weight:bold; }
+.project-link:hover { text-decoration:underline; }
+.contact p { color:var(--muted); margin-bottom:15px; }
+footer {
+  border-top:1px solid var(--line); text-align:center;
+  padding:25px 0; color:var(--muted); margin-top:40px;
+}
+@media(max-width:750px) {
+  .hero { grid-template-columns:1fr; text-align:center; padding-top:45px; }
+  .photo { grid-row:1; width:190px; height:190px; }
+  .actions,.facts { justify-content:center; }
+  .projects { grid-template-columns:1fr; }
+  nav { padding:15px 0; }
+}
+</style>
+</head>
+<body>
+<header>
+  <nav class="wrap">
+    <a class="brand" href="#home">Miracle<span>.</span></a>
+    <div class="navlinks">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <div class="hero wrap" id="home">
+    <div>
+      <p class="eyebrow">Aspiring Front-End Developer</p>
+      <h1>Hi, I'm <span>Miracle Chika Obi.</span></h1>
+      <p class="intro">
+        I'm a Computer Engineering student learning by building
+        useful, responsive, and user-friendly web experiences.
+        Welcome to my portfolio!
+      </p>
+      <div class="actions">
+        <a class="btn primary" href="#projects">Explore My Projects ↓</a>
+        <a class="btn secondary" href="#contact">Contact Me</a>
+      </div>
+      <div class="facts">
+        <span class="fact">🎓 Computer Engineering</span>
+        <span class="fact">💻 HTML, CSS & JavaScript</span>
+        <span class="fact">📍 Nigeria</span>
+      </div>
+    </div>
+    <img class="photo" src="images/miracle.jpg" alt="Miracle Chika Obi">
+  </div>
+  <section class="wrap" id="about">
+    <p class="eyebrow">About Me</p>
+    <h2>Learning by building.</h2>
+    <div class="about">
+      <p class="muted">
+        I'm studying Computer Engineering at Kaduna Polytechnic and
+        developing my front-end web development skills. I enjoy creating
+        practical projects, learning how websites work, and improving
+        my coding abilities step by step. I'm interested in learning
+        opportunities, collaboration, and useful web projects.
+      </p>
+    </div>
+  </section>
+
+  <section class="wrap" id="skills">
+    <p class="eyebrow">My Toolkit</p>
+    <h2>Skills I'm Developing</h2>
+    <div class="skillbox">
+      <div class="skills">
+        <span class="skill">HTML5</span>
+        <span class="skill">CSS3</span>
+        <span class="skill">JavaScript</span>
+        <span class="skill">Responsive Design</span>
+        <span class="skill">Weather APIs</span>
+        <span class="skill">Local Storage</span>
+        <span class="skill">Git & GitHub</span>
+        <span class="skill">VS Code</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap" id="projects">
+    <p class="eyebrow">My Work</p>
+    <h2>Featured Projects</h2>
+    <p class="muted">Here are three projects I've built while learning web development.</p>
+
+    <div class="projects">
+      <article class="project">
+        <div class="project-icon">☑️</div>
+        <h3>To-Do App</h3>
+        <p>
+          A task manager with task creation, editing, deletion, search,
+          priorities, due dates, filters, progress tracking, and saved tasks.
+        </p>
+        <div class="tags">
+          <span>HTML</span><span>CSS</span><span>JavaScript</span>
+        </div>
+        <a class="project-link" href="todo.html">Open To-Do App ↗</a>
+      </article>
+
+      <article class="project">
+        <div class="project-icon">🧮</div>
+        <h3>MiraCalc</h3>
+        <p>
+          A scientific calculator with trigonometry, logarithms, powers,
+          factorials, memory controls, calculation history, and themes.
+        </p>
+        <div class="tags">
+          <span>HTML</span><span>CSS</span><span>JavaScript</span>
+        </div>
+        <a class="project-link" href="calculator.html">Open MiraCalc ↗</a>
+      </article>
+
+      <article class="project">
+        <div class="project-icon">🌦️</div>
+        <h3>SkyCast Weather</h3>
+        <p>
+          A weather dashboard that searches for cities, displays current
+          conditions, and provides a seven-day forecast using a weather API.
+        </p>
+        <div class="tags">
+          <span>HTML</span><span>CSS</span><span>JavaScript</span><span>API</span>
+        </div>
+        <a class="project-link" href="weather.html">Open SkyCast ↗</a>
+      </article>
+    </div>
+  </section>
+
+  <section class="wrap" id="contact">
+    <p class="eyebrow">Let's Connect</p>
+    <h2>Have a project or opportunity?</h2>
+    <div class="contact">
+      <p>
+        I'm open to learning opportunities, collaborations, internships,
+        and suitable entry-level front-end development opportunities.
+      </p>
+      <a class="btn primary" href="mailto:miracleobi055@gmail.com">✉ Email Me</a>
+      <a class="btn secondary" href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub Profile ↗</a>
+      <p style="margin-top:15px;font-size:13px">
+        Before publishing, replace the GitHub link above with your own profile URL.
+      </p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  © <span id="year"></span> Miracle Chika Obi · Built with HTML, CSS & JavaScript
+</footer>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
